@@ -1,0 +1,9 @@
+services:
+  dicebear:
+    image: dicebear/api:3
+    restart: always
+    ports:
+      - '3000:3000'
+    tmpfs:
+      - '/run'
+      - '/tmp'
