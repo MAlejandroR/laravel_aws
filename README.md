@@ -6,7 +6,7 @@ Este proyecto es un ejemplo sencillo de una aplicación **Laravel** (CRUD de alu
 - **S3** (opcional, para almacenamiento de archivos, no utilizado en este ejemplo por restricciones de AWS Academy)
 
 ---
-
+![Servicios](./public/images/services_ec2_rds_s3.jpg)
 ## Infraestructura
 - **EC2** (Ubuntu 22.04 LTS)
 - **RDS** (MySQL 8.x)

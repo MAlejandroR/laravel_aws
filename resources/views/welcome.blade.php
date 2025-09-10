@@ -107,25 +107,33 @@
                                 </div>
 
                                 <div class="relative">
-                                    <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                                        </svg>
+                                    <div class="flex flex-row justify-start items-center">
+                                        <a href="https://aws.amazon.com/es/rds/">
+                                            <img
+                                                src="{{ asset('images/rds.png') }}"
+                                                alt="{{ config('app.name', 'Gestión de Alumnos') }} logo"
+                                                class="w-12 h-12 w-auto max-w-[180px] sm:h-14 transition-transform duration-300 hover:scale-105"
+                                            />
+                                        </a>
+                                        <p class="ml-2 text-lg leading-6 font-medium text-gray-900">Servicios RDS</p>
                                     </div>
-                                    <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Registros Detallados</p>
-                                    <p class="mt-2 ml-16 text-base text-gray-500">Mantén un registro completo de la información académica de cada estudiante.</p>
+                                                               <p class="mt-2 ml-16 text-base text-gray-500">Mantén un registro completo de la información académica de cada estudiante.</p>
                                 </div>
 
-                                <div class="relative">
-                                    <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                                        </svg>
-                                    </div>
-                                    <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Actualización en Tiempo Real</p>
-                                    <p class="mt-2 ml-16 text-base text-gray-500">Actualiza la información de los estudiantes y ve los cambios al instante.</p>
+                            <div class="relative">
+                                <div class="flex flex-row justify-start items-center">
+                                    <a href="https://aws.amazon.com/es/rds/">
+                                        <img
+                                            src="{{ asset('images/s3.png') }}"
+                                            alt="{{ config('app.name', 'Gestión de Alumnos') }} logo"
+                                            class="w-12 h-12 w-auto max-w-[180px] sm:h-14 transition-transform duration-300 hover:scale-105"
+                                        />
+                                    </a>
+                                    <p class="ml-2 text-lg leading-6 font-medium text-gray-900">Servicios S3</p>
                                 </div>
+                                <p class="mt-2 ml-16 text-base text-gray-500">Establece buckets para almacenar objetos en la nube.</p>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -134,9 +142,9 @@
                 <div class="bg-gray-50 py-12">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div class="lg:text-center mb-12">
-                            <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Vista Previa</h2>
+                            <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Esquema objeto de implementación</h2>
                             <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                                Interfaz intuitiva y fácil de usar
+                                Entorno seguro y en la nube
                             </p>
                         </div>
 
@@ -147,28 +155,27 @@
                                 <div class="w-3 h-3 rounded-full bg-green-500"></div>
                             </div>
                             <div class="p-6">
-                                <div class="flex items-center space-x-4 mb-6">
+                                <div class="flex flex-row  justify-center items-center space-y-6 mb-6">
                                     <div class="flex-shrink-0">
-                                        <img class="h-12 w-12 rounded-full" src="https://ui-avatars.com/api/?name=Juan+Perez&background=6366F1&color=fff" alt="">
+                                        <img class="h-48 w-auto object-contain" src="{{asset("/images/deployed_local_to_aws.png")}}" alt="despliegue local a aws">
                                     </div>
-                                    <div>
-                                        <div class="text-lg font-medium text-gray-900">Juan Perez</div>
-                                        <div class="text-gray-500">juan.perez@example.com</div>
+                                    <div class="flex-shrink-0">
+                                        <img class="h-48 w-auto object-contain" src="{{asset("/images/services_ec2_rds_s3.jpg")}}" alt="servicios ec2 rds s3">
                                     </div>
                                 </div>
-                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                    <div class="p-4 bg-indigo-50 rounded-lg">
-                                        <div class="text-sm font-medium text-indigo-600">Curso</div>
-                                        <div class="text-lg font-semibold">4to A</div>
-                                    </div>
-                                    <div class="p-4 bg-indigo-50 rounded-lg">
-                                        <div class="text-sm font-medium text-indigo-600">Promedio</div>
-                                        <div class="text-lg font-semibold">8.5</div>
-                                    </div>
-                                    <div class="p-4 bg-indigo-50 rounded-lg">
-                                        <div class="text-sm font-medium text-indigo-600">Asistencia</div>
-                                        <div class="text-lg font-semibold">95%</div>
-                                    </div>
+
+                                <div class="flex flex-col mt-4">
+                                    <p class="text-gray-700 text-lg">
+                                        El objetivo de este proyecto es desplegar una aplicación web desarrollada localmente en la infraestructura de Amazon Web Services (AWS).
+                                    </p>
+                                    <p class="text-gray-700 text-lg mt-2">
+                                        Para ello, se utilizarán los siguientes servicios clave de AWS:
+                                    </p>
+                                    <ul class="list-disc list-inside text-gray-700 text-lg mt-2 ml-4">
+                                        <li><strong>Amazon EC2</strong> (Elastic Compute Cloud) para el servidor de la aplicación.</li>
+                                        <li><strong>Amazon RDS</strong> (Relational Database Service) para la base de datos.</li>
+                                        <li><strong>Amazon S3</strong> (Simple Storage Service) para el almacenamiento de archivos.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
