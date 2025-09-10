@@ -5,8 +5,12 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                    <a href="https://nettdigitaltalent.es/">
+                        <img
+                            src="{{ asset('images/logo_nett.png') }}"
+                            alt="{{ config('app.name', 'Gestión de Alumnos') }} logo"
+                            class="h-12 w-auto max-w-[180px] sm:h-14 transition-transform duration-300 hover:scale-105"
+                        >
                     </a>
                 </div>
 

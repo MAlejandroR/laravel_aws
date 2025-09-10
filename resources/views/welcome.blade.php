@@ -26,12 +26,14 @@
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex justify-between h-16">
                         <div class="flex items-center">
-                            <a href=""></a>
+                            <a href="https://nettdigitaltalent.es/">
                             <img
                                 src="{{ asset('images/logo_nett.png') }}"
                                 alt="{{ config('app.name', 'Gestión de Alumnos') }} logo"
                                 class="h-12 w-auto max-w-[180px] sm:h-14 transition-transform duration-300 hover:scale-105"
-                            >                            <div class="text-xl font-bold text-indigo-600">Gestión de Alumnos</div>
+                            >
+                            </a>
+                            <div class="text-xl font-bold text-indigo-600">Gestión de Alumnos</div>
                         </div>
                         <div class="hidden sm:ml-6 sm:flex sm:items-center space-x-4">
                             @if (Route::has('login'))
@@ -90,12 +92,18 @@
                             <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
                                 <div class="relative">
                                     <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                                        </svg>
+                                        <a href="https://aws.amazon.com/es/ec2/?">
+                                            <img
+                                                src="{{ asset('images/aws_ec2.jpeg') }}"
+                                                alt="{{ config('app.name', 'Gestión de Alumnos') }} logo"
+                                                class="h-12 w-auto max-w-[180px] sm:h-14 transition-transform duration-300 hover:scale-105"
+                                            >
+                                        </a>
+
                                     </div>
-                                    <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Gestión de Perfiles</p>
-                                    <p class="mt-2 ml-16 text-base text-gray-500">Administra fácilmente los perfiles de los alumnos con fotos y toda su información relevante.</p>
+                                    <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Servicios de AWS</p>
+                                    <p class="mt-2 ml-16 text-base text-gray-500">Desplegaremos esta app en una EC2 de Amazon.</p>
+
                                 </div>
 
                                 <div class="relative">

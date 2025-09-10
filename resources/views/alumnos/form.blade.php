@@ -38,7 +38,7 @@
             </template>
             <template x-if="!preview">
                 @if($alumno && $alumno->avatar)
-                    <img src="{{ asset('storage/' . $alumno->avatar) }}"
+                    <img src="{{ asset('storage/avatars/' . $alumno->avatar) }}"
                          alt="{{ $alumno->nombre }}"
                          class="h-full w-full object-cover">
                 @else
