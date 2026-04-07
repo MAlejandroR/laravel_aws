@@ -17,6 +17,16 @@ class AlumnoFactory extends Factory
     public function definition(): array
     {
         return [
+            'nombre' => fake()->firstName(),
+            'apellidos' => fake()->lastName(),
+            'email' => fake()->unique()->safeEmail(),
+            'telefono' => fake()->phoneNumber(),
+            'direccion' => fake()->streetAddress(),
+            'ciudad' => fake()->city(),
+            'notas' => fake()->sentence(),
+
+            // Elegir avatar aleatorio
+            'avatar' => 'https://i.pravatar.cc/300?img=' . rand(1, 70),
             //
         ];
     }

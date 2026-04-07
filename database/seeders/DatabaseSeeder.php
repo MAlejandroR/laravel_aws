@@ -23,6 +23,9 @@ class DatabaseSeeder extends Seeder
             'email' => 'a@a.com',
             'password' => Hash::make('12345678')
         ]);
+        $this->call([
+            AlumnoSeeder::class,
+        ]);
 //        $faker = Faker::create();
 //
 //        for ($i = 1; $i <= 20; $i++) {
