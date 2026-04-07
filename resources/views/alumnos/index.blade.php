@@ -33,7 +33,7 @@
                             @forelse($alumnos as $alumno)
                                 <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <img class="h-10 w-10 rounded-full" src="{{ asset($alumno->avatar) }}" alt="{{$alumno->avatar}}" width="80" height="80">
+                                        <img class="h-10 w-10 rounded-full" src="{{ asset("storage/$alumno->avatar") }}" alt="{{$alumno->avatar}}" width="80" height="80">
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="text-sm font-medium text-gray-900">{{ $alumno->nombre }}</div>
