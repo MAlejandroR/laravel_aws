@@ -72,8 +72,13 @@ class AlumnoController extends Controller
             'pais' => 'nullable|string|max:100',
             'codigo_postal' => 'nullable|string|max:10',
             'notas' => 'nullable|string',
+            'avatar' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
         ]);
-
+        if (request()->hasFile("avatar")) {
+            $filename = time()."_".$request->file('avatar')->getClientOriginalName();
+            $path = $request->file('avatar')->storeAs('avatars',$filename, 'public');
+            $validated['avatar'] = $filename;
+        }
         $alumno->update($validated);
 
         return redirect()->route('alumnos.index')

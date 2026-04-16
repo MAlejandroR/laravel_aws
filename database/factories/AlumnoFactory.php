@@ -26,7 +26,7 @@ class AlumnoFactory extends Factory
         // Reutiliza si supera el límite
         $index = ($n % $max) ?: $max;
 
-        $filename = "avatars/avatar$index.jpg";
+        $filename = "avatar$index.jpg";
         $url = "https://i.pravatar.cc/300?img=$index";
 
         // Descargar SOLO si no existe
