@@ -20,26 +20,21 @@ class AlumnoFactory extends Factory
     {
         static $n = 1;
 
-        // Limitar a 70 imágenes (pravatar)
         $max = 70;
-
-        // Reutiliza si supera el límite
         $index = ($n % $max) ?: $max;
 
         $filename = "avatar$index.jpg";
         $url = "https://i.pravatar.cc/300?img=$index";
 
-        // Descargar SOLO si no existe
-        if (!Storage::disk('public')->exists($filename)) {
+        if (!Storage::disk('public')->exists("avatars/$filename")) {
             $response = Http::get($url);
 
             if ($response->successful()) {
-                Storage::disk('public')->put($filename, $response->body());
+                Storage::disk('public')->put("avatars/$filename", $response->body());
             }
         }
 
         $n++;
-
 
         return [
             'nombre' => fake()->firstName(),
@@ -49,10 +44,7 @@ class AlumnoFactory extends Factory
             'direccion' => fake()->streetAddress(),
             'ciudad' => fake()->city(),
             'notas' => fake()->sentence(),
-
-            // Elegir avatar aleatorio
             'avatar' => $filename,
-            //
         ];
     }
 }
