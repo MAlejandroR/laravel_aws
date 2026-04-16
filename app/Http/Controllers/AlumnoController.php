@@ -9,7 +9,7 @@ class AlumnoController extends Controller
 {
     public function index()
     {
-        $alumnos = Alumno::orderBy('apellidos')->paginate(10);
+        $alumnos = Alumno::orderBy('created_at','desc')->paginate(10);
 
         return view('alumnos.index', compact('alumnos'));
     }
@@ -21,7 +21,6 @@ class AlumnoController extends Controller
 
     public function store(Request $request)
     {
-
         $validated = $request->validate([
             'nombre' => 'required|string|max:255',
             'apellidos' => 'required|string|max:255',
@@ -32,17 +31,14 @@ class AlumnoController extends Controller
             'pais' => 'nullable|string|max:100',
             'codigo_postal' => 'nullable|string|max:10',
             'notas' => 'nullable|string',
-//            'avatar' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // ✅
-
+            'avatar' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg|max:2048',
         ]);
 
-        if ($request->file('avatar')->isValid()) {
-            $filename = $request->file('avatar')->getClientOriginalName();
-            $filename=$request->email.$filename;
-            $path = $request->file('avatar')->storeAs('avatars',$filename, 'public');
+        if ($request->hasFile('avatar') && $request->file('avatar')->isValid()) {
+            $filename = $request->email . '_' . $request->file('avatar')->getClientOriginalName();
+            $path = $request->file('avatar')->storeAs('avatars', $filename, 'public');
             $validated['avatar'] = $filename;
         }
-
 
         Alumno::create($validated);
 
